@@ -2,9 +2,9 @@
 {
     class Conta
     {
-        public int Numero { get; set; }
-        public string Titular { get; set; }
-        public double Saldo { get; set; }
+        public int Numero { get; private set; }
+        public string Titular { get; private set; }
+        public double Saldo { get; protected set; }
 
         public Conta()
         {

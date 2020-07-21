@@ -1,6 +1,6 @@
 ﻿namespace HerancaPolimorfismo.Entidades
-{
-    class ContaPoupanca : Conta
+{    //uso de sealed antes de class impedirá uma especialização à partir desta classe
+    sealed class ContaPoupanca : Conta
     {
         public double TaxaJuros { get; set; }
 
@@ -17,10 +17,10 @@
         {
             Saldo += Saldo * TaxaJuros;
         }
-        //Uso da palavra base, vai executar o método da superclasse normalmente, mas com o base é possível inserir outras regras como segue
-        public override void Saque(double quantia)
+        //No caso de se der declarado diretamente no médodo, o uso de sealed impedirá que o médodo seja sobrescrito em outra classe
+        public sealed override void Saque(double quantia)
         {
-            base.Saque(quantia); //<--Fará saque normalmente, mas, conforme abaixo, vai descontar taxa de 2.0
+            base.Saque(quantia); 
             Saldo -= 2.0;
 
         }

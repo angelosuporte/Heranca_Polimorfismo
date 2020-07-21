@@ -12,7 +12,8 @@ namespace HerancaPolimorfismo
 
             conta1.Saque(10.0);
             conta2.Saque(100.0);
-
+            //Como não há sobreposição, ou seja, uso das palavras virtual e override será aplicado no saque o mesmo desconto  de 5.0
+            //tanto na conta, bem como na poupança
             Console.WriteLine(conta1.Saldo);
             Console.WriteLine(conta2.Saldo);
         }

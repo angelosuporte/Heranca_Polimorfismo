@@ -17,7 +17,13 @@
         {
             Saldo += Saldo * TaxaJuros;
         }
+        //Uso da palavra base, vai executar o método da superclasse normalmente, mas com o base é possível inserir outras regras como segue
+        public override void Saque(double quantia)
+        {
+            base.Saque(quantia); //<--Fará saque normalmente, mas, conforme abaixo, vai descontar taxa de 2.0
+            Saldo -= 2.0;
 
+        }
     }
 
 }

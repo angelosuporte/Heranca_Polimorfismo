@@ -16,8 +16,7 @@
             Titular = titular;
             Saldo = saldo;
         }
-
-        public void Saque(double quantia)
+        public virtual void Saque(double quantia)
         {
             Saldo -= quantia + 5.0; //<-----------------Taxa de saque 5.0
         }

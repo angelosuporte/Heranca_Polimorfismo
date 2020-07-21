@@ -19,7 +19,7 @@
 
         public void Saque(double quantia)
         {
-            Saldo -= quantia + 5.0 ;
+            Saldo -= quantia + 5.0; //<-----------------Taxa de saque 5.0
         }
         public void Deposito(double quantia)
         {
